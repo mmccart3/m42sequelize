@@ -3,6 +3,11 @@ require('dotenv').config();
 // import * as dotenv from 'dotenv'
 // dotenv.config()
 const { Sequelize } =  require("sequelize");
-// const test = new Sequelize(process.env.MYSQL_URI);
-// console.log(test);
-exports.sequelize = new Sequelize(process.env.MYSQL_URI);
+
+const sequelize = new Sequelize(process.env.MYSQL_URI);
+
+sequelize.authenticate();
+console.log('Connection has been established successfully.');
+
+module.exports = {sequelize}
+// exports.sequelize = new Sequelize(process.env.MYSQL_URI);

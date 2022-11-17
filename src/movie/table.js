@@ -2,18 +2,21 @@ const { DataTypes } = require("sequelize");
 const { sequelize } = require("../db/connection");
 
 const Movie =sequelize.define("Movie", {
+    movie_id:{
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
     title : {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
-    actor: {
-        type: DataTypes.STRING,
-        defaultValue: "Not specified"
+    actor_id: {
+        type: DataTypes.INTEGER,
     },
-    director: {
-        type: DataTypes.STRING,
-        defaultValue: "Not Specified"
+    director_id: {
+        type: DataTypes.INTEGER,
     }
 });
 
