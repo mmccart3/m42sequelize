@@ -10,6 +10,6 @@ const Actor = sequelize.define('Actor',{
     name: {
         type: DataTypes.STRING,
         }
-});
+},{timestamps:false});
 
 module.exports = Actor;

@@ -10,6 +10,6 @@ const Director= sequelize.define('Director',{
     name: {
         type: DataTypes.STRING,
         }
-});
+},{timestamps:false});
 
 module.exports = Director;
